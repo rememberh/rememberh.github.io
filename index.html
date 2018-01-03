@@ -19,11 +19,11 @@
 		 	margin: 0 auto;
 		 }
 		 table span{
-		 	font-size:12px; color: white;
+		 	font-size:16px; color: white;
 		 }
 		 table input.shurukuang{
 		 	width: 290px; height: 40px; background: rgb(203,203,203); color: white;
-		 	font-size: 12px; outline: none; padding-left: 10px; border: none;
+		 	font-size: 16px; outline: none; padding-left: 10px; border: none;
 		 }
 		 #yanzheng{
 		 	width: 200px;
@@ -67,7 +67,7 @@
 			</tr>
 			<tr>
 				<td width="100px" height="50px"></td>
-				<td width="300px" height="50px" class="tongyi" ><input type="radio"/>同意<a href="javascript:">良仓注册条款</a></td>
+				<td width="300px" height="50px" class="tongyi" ><input type="checkbox"/>同意<a href="javascript:">良仓注册条款</a></td>
 			</tr>
 			<tr>
 				<td width="100px" height="50px"></td>
@@ -86,40 +86,21 @@
 		</table>
 	</body>
 </html>
+<script src="js/fuzhi.js"></script>
 <script>
 	var oPho=document.getElementById("phone");
 	var oPw=document.getElementById("shuru");
 	var oQr=document.getElementById("queren");
 	var oZhuce=document.getElementById("zhuce");
-	oZhuce.onclick=function()
-	{
-		var username=oPho.value;
-		//var possword=oPw.value;
-		//var possword=oQr.value;
-		var possword=oPw.value;
-		var posswords=oQr.value;
-		var xhr=new XMLHttpRequest();
-		xhr.onreadystatechange=function()
-		{
-			console.log("ss");
-			if(xhr.readyState==4)
-			{
-				
-				if(xhr.status>=200&&xhr.status<300||xhr.status==304)
-				{
-					
-					var obj=JSON.parse(xhr.responseText);
-					console.log(obj.code);
-					if(obj.code==1004)
-					{
-						console.log("haha");
-					}
-				}
-			}
-		}
-		xhr.open("GET","http://h6.duchengjiu.top/shop/api_user.php?username="+username+"&possword="+possword+"&status=register",true);
-		//xhr.setRequestHeader("content-type","application/x-www-form-urlenclded");
-		//xhr.send('username='+username+'&possword='+possword+'&status'+'register')
-		xhr.send(null);
-	}
+    oZhuce.onclick=function(){
+    	var Username=oPho.value;
+    	var Possword=oPw.value;
+    	var json={
+    		status:"register",
+    		username:Username,
+    		possword:Possword
+    	
+    	}
+    	loginOrRegister(json)
+    }
 </script>
