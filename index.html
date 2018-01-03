@@ -3,83 +3,123 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
-		<script type="text/javascript" href="js/index.js"></script>
+		<style type="text/css">
+		*{margin: 0; padding: 0;}
+		img{border: none;}
+		li{list-style: none;}
+		a{text-decoration: none;}
+		body{
+			background: rgb(153,153,153);
+		}
+		.logo{
+			width: 260px; height: 100px; margin: 100px auto 30px; 
+			padding-left: 130px;
+		}
+		 table{
+		 	margin: 0 auto;
+		 }
+		 table span{
+		 	font-size:12px; color: white;
+		 }
+		 table input.shurukuang{
+		 	width: 290px; height: 40px; background: rgb(203,203,203); color: white;
+		 	font-size: 12px; outline: none; padding-left: 10px; border: none;
+		 }
+		 #yanzheng{
+		 	width: 200px;
+		 }
+		 table input.zhucekuang{
+		 	width: 300px; height: 40px; background: rgb(203,203,203); color: white;
+		 	font-size: 18px; font-weith:block; outline: none;
+		 }
+		 table .tongyi{
+		 	font-size: 12px;
+		 }
+		 table .denglutujing img{
+		 	margin-left:10px; float: left;
+		 }
+		 table .denglutujing p{
+		 	float: right; height: 30px; line-height: 30px; color: white;
+		 	border-bottom:1px solid white; font-size: 16px;
+		 }
+		</style>
 	</head>
 	<body>
-		<div class="b-header">
-
-			<div class="header">
-				<div class="header-l">
-					<a href="javascript:"><img src="img/logo.png"/></a>
-				</div>
-				<div class="header-r">
-					<ul>
-						<li class="denglu">
-							<a href="javascript:">登录</a>
-							<a href="javascript:">注册</a>
-						</li>
-						<li>|</li>
-						<li class="qita">
-							<a href="javascript:">购物车</a>
-							<div class="sub1">
-								<p class="P1">您的购物车暂时没有商品</p>
-								<p class="P2">快去良仓抢购商品吧</p>
-							</div>
-						</li>
-						<li>|</li>
-						<li class="qita">
-							<a href="javascript:">消息</a>
-							<div class="sub2">
-								<ul>
-									<li><a href="javascript">动态</a></li>
-									<li><a href="javascript">评论</a></li>
-									<li><a href="javascript">私信</a></li>
-									<li><a href="javascript">粉丝</a></li>
-									<li><a href="javascript">喜欢</a></li>
-									<li><a href="javascript">通知</a></li>
-								</ul>
-							</div>
-						</li>
-						<li>|</li>
-						<li class="qita"><a href="javascript:">添加良品</a></li>
-					</ul>
-				</div>
-			</div>
+		<div class="logo">
+		<a href="javascript:"><img src="img/1.png"/></a>
 		</div>
-	    <div class="nav">
-	    	<div class="nav-l">
-		    	<ul>
-		    		<li class="shouye"><a href="javascript:">首页</a></li>
-		    		<li><a href="javascript:">商店</a></li>
-		    		<li><a href="javascript:">杂志</a></li>
-		    		<li><a href="javascript:">分享</a></li>
-		    		<li><a href="javascript:">达人</a></li>
-		    	</ul>
-	    	</div>
-	    	<div class="nav-r">
-	    		<img src="img/sousuo.png"/>
-	    	</div>
-	    </div>
-	    <div id="photo">
-	    	<ul>
-	    		<li class="active">
-	    			<a href="javascript:"><img src="img/1.png"/></a>
-	    		</li>
-	    		<li class="active">
-	    			<a href="javascript:"><img src="img/2.jpg"/></a>
-	    		</li>
-	    		<li class="active">
-	    			<a href="javascript:"><img src="img/3.jpg"/></a>
-	    		</li>
-	    	</ul>
-	    	<a href="javascript:" id="pre"></a>
-	        <a href="javascript:" id="next"></a>
-	        <div class="num" id="num">		    
-				<span class="activecolor"></span>
-			    <span></span>
-			    <span></span>	    
-			</div>
-	    </div>
-    </body>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100px" height="50px"><span>手机号</span></td>
+				<td width="300px" height="50px"><input class="shurukuang" type="text" id="phone" placeholder="请输入手机号" /></td>
+			</tr>
+			<tr>
+				<td width="100px" height="50px"><span>验证码</span></td>
+				<td width="300px" height="50px"><input class="shurukuang" type="text" id="yanzheng" placeholder="输入验证码" /></td>
+			</tr>
+			<tr>
+				<td width="100px" height="50px"><span>创建密码</span></td>
+				<td width="300px" height="50px"><input class="shurukuang" type="text" id="shuru" placeholder="6-20位字符组成，区分大小写" /></td>
+			</tr>
+			<tr>
+				<td width="100px" height="50px"><span>密码确认</span></td>
+				<td width="300px" height="50px"><input class="shurukuang" type="text" id="queren" placeholder="确认密码" /></td>
+			</tr>
+			<tr>
+				<td width="100px" height="50px"></td>
+				<td width="300px" height="50px" class="tongyi" ><input type="radio"/>同意<a href="javascript:">良仓注册条款</a></td>
+			</tr>
+			<tr>
+				<td width="100px" height="50px"></td>
+				<td width="300px" height="50px"><input class="zhucekuang" type="button"  id="zhuce" value="立即注册" /></td>
+			</tr>
+			<tr>
+				<td width="100px" height="50px"></td>
+				<td width="300px" height="50px" class="denglutujing">
+					<a href="javascript:"><img src="img/2.png"/></a>
+					<a href="javascript:"><img src="img/3.png"/></a>
+					<a href="javascript:"><img src="img/4.png"/></a>
+					<a href="javascript:"><img src="img/5.png"/></a>
+					<a href="javascript:"><p>登录良仓</p></a>
+				</td>
+			</tr>
+		</table>
+	</body>
 </html>
+<script>
+	var oPho=document.getElementById("phone");
+	var oPw=document.getElementById("shuru");
+	var oQr=document.getElementById("queren");
+	var oZhuce=document.getElementById("zhuce");
+	oZhuce.onclick=function()
+	{
+		var username=oPho.value;
+		//var possword=oPw.value;
+		//var possword=oQr.value;
+		var possword=oPw.value;
+		var posswords=oQr.value;
+		var xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=function()
+		{
+			console.log("ss");
+			if(xhr.readyState==4)
+			{
+				
+				if(xhr.status>=200&&xhr.status<300||xhr.status==304)
+				{
+					
+					var obj=JSON.parse(xhr.responseText);
+					console.log(obj.code);
+					if(obj.code==1004)
+					{
+						console.log("haha");
+					}
+				}
+			}
+		}
+		xhr.open("GET","http://h6.duchengjiu.top/shop/api_user.php?username="+username+"&possword="+possword+"&status=register",true);
+		//xhr.setRequestHeader("content-type","application/x-www-form-urlenclded");
+		//xhr.send('username='+username+'&possword='+possword+'&status'+'register')
+		xhr.send(null);
+	}
+</script>
